@@ -12,4 +12,5 @@ public interface RemindersRepository extends JpaRepository<Reminder, Integer> {
 	public List<Reminder> findAllByOrderByIdAsc();
 	//public Boolean exists(Reminder reminder);
 	//public List<Reminder> findAllByUserId(Integer id);
+	public Boolean existsReminderById(Integer id);
 }
