@@ -86,13 +86,13 @@ public class ReminderResource {
 	/** To be implemented as another service
 	 * TODO : remove getAll  functionality from here
 	 */
-//	@GetMapping
-//	public List<Reminder> getAllReminders(){
-//		List<Reminder> reminders =  new ArrayList<>(); 
-//		reminders = repository.findAll();
-//		
-//		return reminders;		
-//	}
+	@GetMapping
+	public List<Reminder> getAllReminders(){
+		List<Reminder> reminders =  new ArrayList<>();
+		reminders = repository.findAll();
+
+		return reminders;
+	}
 	
 	@GetMapping("/{from}/{to}")
 	public List<Reminder> findRange(@PathVariable("from") Integer from, @PathVariable("to") Integer to ){
